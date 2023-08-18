@@ -1,0 +1,143 @@
+/* 반응형 대비 최소 제한 너비 설정 */
+header, main {min-width: 900px;}
+/* header */
+header {
+    background:#600E0E;
+    position: fixed; left: 0; top: 0; width: 100%; z-index: 999;
+    padding: 40px 30px 0 30px;
+}
+header nav {
+    border-top:1px solid #fff;
+    border-bottom: 5px solid #fff;
+    padding: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+header nav .gnb {}
+header nav .gnb a:last-child {margin-right: 0;}
+header nav .gnb a:hover {color: #eed8d8;}
+header nav .gnb a {
+    color: #fff;
+    margin-right: 34px;
+    font-weight: 500;
+}
+header nav .sns {}
+header nav .sns span {
+    color: #fff;
+}
+/* #home */
+main {}
+main > * {padding: 0 30px;} /* main의 모든 자식요소들  */
+main #home {
+    background:#600E0E;
+    height: 100vh; text-align: center;  margin: 0 auto;}
+main #home h1 {padding-top:243px;}
+main #home h1 img {}
+main #home .mouse {
+    position: absolute; left: 50%; bottom: 60px;
+    transform: translateX(-50%);
+}
+main #home .mouse img {animation: mouse_move 1s linear alternate infinite;}
+@keyframes mouse_move {
+    0% {transform: translateY(0)}
+    100% {transform: translateY(-50px)}
+}
+
+/* Skill */
+main #skill {}
+main #skill h1 {
+    /* width: 1096px; */ margin: 0 auto;
+    font-size: 2.5rem; font-weight: 700;
+    color: #600E0E;
+    border-bottom: 3px solid #660e0e;
+    padding-bottom: 18px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+main #skill .container {
+    height: 700px; 
+    display: flex;
+    flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 flex */
+    align-content: space-between;
+}
+main #skill .container li {
+    width: 45%;
+    display: flex;
+    flex-flow: row nowrap;     /* 아이콘, 글자 옆으로 배치하는 flex */
+    border-bottom:1px dotted #ddd;
+    padding-bottom:30px;
+    margin-bottom: 30px;
+}
+main #skill .container li span {
+    line-height: 25px;
+} 
+main #skill .container li .icon {width: 80px;} /* 고정값 */
+main #skill .container li .icon img {}
+main #skill .container li .contents {width: calc(100% - 68px);} /* 아이콘 값 을 뺀 나머지 너비값 */
+
+/* #profile */
+main #profile {padding-bottom: 118px;}
+main #profile h1 {text-align: center;}
+main #profile h1 img {}
+main #profile .container {
+    display: flex; 
+    flex-flow: row nowrap;
+    padding: 100px 600px;
+    
+}
+main #profile .container .info_left {
+    padding-right: 100px;
+    border-right: 3px solid #ddd;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: left;
+}
+main #profile .container .info_left .name {
+}
+main #profile .container .info_left .name .photo {
+    margin-left: -15px;
+}
+main #profile .container .info_left .name p {
+    font-size: 1.3rem; 
+    padding-top: 10px;
+}
+main #profile .container .info_left .name p em {
+    font-size: 1.5rem; 
+    font-weight: 600;
+}
+main #profile .container .info_left .btm {
+    padding-top: 40px ;
+}
+main #profile .container .info_left .btm p {
+    font-size: 1.2rem;
+    padding-bottom:10px ;
+}
+main #profile .container .info_right {
+    padding-left: 100px;
+}
+main #profile .container .info_right {
+}
+main #profile .container .info_right h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 29px;
+    margin-left: -35px;
+}
+main #profile .container .info_right h2 img {
+    margin-right: 10px; 
+    padding-bottom: 3px;
+}
+main #profile .container .info_right dl {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom:41px ;
+}
+main #profile .container .info_right dl dt {
+    width: 102px;
+    margin-bottom:15px ;
+    font-size: 1.2rem;
+}
+main #profile .container .info_right dl dd {
+    width: calc(100% - 102px);
+    font-size: 1.2rem;
+}
