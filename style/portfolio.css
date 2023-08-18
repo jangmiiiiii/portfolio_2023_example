@@ -1,3 +1,4 @@
+body, html {scroll-behavior: smooth;}
 /* 반응형 대비 최소 제한 너비 설정 */
 header, main {min-width: 900px;}
 /* header */
